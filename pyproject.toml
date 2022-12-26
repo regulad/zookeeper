@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "stingray-zookeeper"
+version = "0.1.0"
+description = "Zookeeper is a command-line utility for managing Stingray."
+authors = ["Parker Wahle <parkeredwardwahle2017@gmail.com>"]
+license = "GPLv3"
+readme = "README.md"
+homepage = "https://github.com/regulad/zookeeper"
+repository = "https://github.com/regulad/zookeeper"
+packages = [
+    { include = "zookeeper" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+nginxproxymanager = "^0.1.0"
+py-dactyl = "^2.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+zookeeper = 'zookeeper:__main__.main'
+stingray-zookeeper = 'zookeeper:__main__.main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
